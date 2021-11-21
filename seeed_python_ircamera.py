@@ -111,27 +111,27 @@ class DataReader(QThread):
 
                     abovePointIndex = i-32
                     if (abovePointIndex>0):
-                        if hetData[abovePointIndex] is not "nan" :
+                        if hetData[abovePointIndex] is not nan :
                             interpolationPointCount += 1
                             sumValue += float(hetData[abovePointIndex])
 
                     belowPointIndex = i+32
                     if (belowPointIndex<768):
                         print(" ")
-                        if hetData[belowPointIndex] is not "nan" :
+                        if hetData[belowPointIndex] is not nan :
                             interpolationPointCount += 1
                             sumValue += float(hetData[belowPointIndex])
                             
                     leftPointIndex = i -1
                     if (curCol != 31):
-                        if hetData[leftPointIndex]  is not "nan" :
+                        if hetData[leftPointIndex]  is not nan :
                             interpolationPointCount += 1
                             sumValue += float(hetData[leftPointIndex])
 
                     rightPointIndex = i + 1
                     if (belowPointIndex<768):
                         if (curCol != 0):
-                            if hetData[rightPointIndex] is not "nan" :
+                            if hetData[rightPointIndex] is not nan :
                                 interpolationPointCount += 1
                                 sumValue += float(hetData[rightPointIndex])
 
